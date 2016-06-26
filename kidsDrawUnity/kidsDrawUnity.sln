@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A7E429ED-D7FA-BAF0-AA91-C89A88FFA3BB}") = "kidsDrawUnity", "Assembly-CSharp-firstpass.csproj", "{4920EDFC-5673-DB9F-CE39-96679F827B3D}"
+EndProject
+Project("{A7E429ED-D7FA-BAF0-AA91-C89A88FFA3BB}") = "kidsDrawUnity", "Assembly-CSharp.csproj", "{65C2B79C-F3AF-8EB6-A014-A296229C80B5}"
+EndProject
+Project("{A7E429ED-D7FA-BAF0-AA91-C89A88FFA3BB}") = "kidsDrawUnity", "Assembly-CSharp-Editor.csproj", "{A68C93B4-DED0-CB30-33A1-D62128C96CEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4920EDFC-5673-DB9F-CE39-96679F827B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4920EDFC-5673-DB9F-CE39-96679F827B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4920EDFC-5673-DB9F-CE39-96679F827B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4920EDFC-5673-DB9F-CE39-96679F827B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C2B79C-F3AF-8EB6-A014-A296229C80B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C2B79C-F3AF-8EB6-A014-A296229C80B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C2B79C-F3AF-8EB6-A014-A296229C80B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C2B79C-F3AF-8EB6-A014-A296229C80B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68C93B4-DED0-CB30-33A1-D62128C96CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68C93B4-DED0-CB30-33A1-D62128C96CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68C93B4-DED0-CB30-33A1-D62128C96CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68C93B4-DED0-CB30-33A1-D62128C96CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
