@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_WEBPLAYER;ENABLE_SUBSTANCE;WEBPLUG;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_3_4;UNITY_5_3;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;PLATFORM_SUPPORTS_ADS_ID;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_DUCK_TYPING</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -49,118 +49,22 @@
      <Compile Include="Assets\Editor\DrawingLineEditor.cs" />
      <Compile Include="Assets\Line Renderer Pro\Editor\LineRendererProEditor.cs" />
      <Compile Include="Assets\Line Renderer Pro\Editor\LineRendererProStandardShaderGUI.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\BuildRasterizedPathEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\BuildShapeExtrusionEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\BuildVolumeCapsEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\BuildVolumeMeshEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\BuildVolumeSpotsEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\ConformPathEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\CreateGameObjectEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\CreateMeshEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\DebugVMeshEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\DebugVolumeEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\InputGameObjectEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\InputMeshEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\InputSplinePathEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\InputSplineShapeEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\InputSpotsEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\MixShapesEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\ModifierMixPathsEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\ModifierTRSMeshEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\ModifierTRSPathEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\ModifierTRSShapeEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\CG Modules\Editor\NoteEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\AboutWindow.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CGEditorUtility.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CGGraph.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CGModuleEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CGResourceEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CanvasSelection.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CanvasState.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CanvasUI.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\CurvyGeneratorEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CG\MetaCGOptionsEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Components\GLCurvyRendererEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Controllers\PathControllerEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Controllers\SplineControllerEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Controllers\VolumeControllerEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyConnectionEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyControllerEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyEditorBase.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyEditorUtility.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyMenu.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyProject.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyPropertyDrawers.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyShapeEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvySplineAlignWizard.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvySplineEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvySplineGroupEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvySplineSegmentEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyStyles.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyToolbar.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\CurvyUISplineEditor.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Wizards\CurvySplineExportWizard.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Wizards\ImportExportWizard.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Wizards\ModuleWizard.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Wizards\ShapeWizard.cs" />
-     <Compile Include="Assets\Packages\Curvy\Base\Editor\Wizards\TemplateWizard.cs" />
-     <Compile Include="Assets\Packages\DevTools\Components\Editor\ComponentPoolEditor.cs" />
-     <Compile Include="Assets\Packages\DevTools\Components\Editor\PoolManagerEditor.cs" />
-     <Compile Include="Assets\Packages\DevTools\Components\Editor\PrefabPoolEditor.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\ClipboardHandler.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DT.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTDebugWindow.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTEditor.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTEditorClasses.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTEditorUtility.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTGUI.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTHandles.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTProject.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTResource.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTSelection.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTStatusbar.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTStyles.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTToolbar.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\DTToolbarItem.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\EditorData.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\EditorKeyDefinition.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\Extensions\EditorExtensions.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\PropertyDrawers.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\ToolbarItemTypes\DTToolbarButton.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\ToolbarItemTypes\DTToolbarRadioButton.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\ToolbarItemTypes\DTToolbarRadioOffButton.cs" />
-     <Compile Include="Assets\Packages\DevTools\Editor\ToolbarItemTypes\DTToolbarToggleButton.cs" />
-     <Compile Include="Assets\SFSoftShadows\Editor\SFEditor.cs" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardMeta.cginc" />
      <None Include="Assets\Line Renderer Pro\Shaders\Unlit\LineUnlit-AlphaTest.shader" />
-     <None Include="Assets\SFSoftShadows\Resources\SFShadowMask.shader" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandard.shader" />
-     <None Include="Assets\Packages\Curvy\link.xml" />
-     <None Include="Assets\SFSoftShadows\Resources\SFLightBlendLinear.shader" />
+     <None Include="Assets\Easy Save 2\changelog.txt" />
      <None Include="Assets\Line Renderer Pro\Shaders\Unlit\LineUnlit-Normal.shader" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardCore.cginc" />
-     <None Include="Assets\Line Renderer Pro\Example\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Line Renderer Pro\README.txt" />
-     <None Include="Assets\SFSoftShadows\Resources\SFSoftShadow.shader" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardInput.cginc" />
-     <None Include="Assets\SFSoftShadows\Resources\SFLightBlendSoft.shader" />
-     <None Include="Assets\SFSoftShadows\Resources\SFFogLayer.shader" />
+     <None Include="Assets\Easy Save 2\readme.txt" />
      <None Include="Assets\Line Renderer Pro\Shaders\Unlit\LineUnlit-Alpha.shader" />
-     <None Include="Assets\Line Renderer Pro\Example\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
-     <None Include="Assets\Packages\Curvy\Base\ClassTemplates\CGModuleTemplate.txt" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
-     <None Include="Assets\Line Renderer Pro\Example\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
-     <None Include="Assets\Packages\Curvy\Base\ClassTemplates\ShapeTemplate.txt" />
+     <None Include="Assets\link.xml" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardUtils.cginc" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardShadow.cginc" />
-     <None Include="Assets\SFSoftShadows\Changelog.txt" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardConfig.cginc" />
-     <None Include="Assets\Packages\Curvy\ReadMe.txt" />
-     <None Include="Assets\Line Renderer Pro\Example\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
-     <None Include="Assets\Line Renderer Pro\Example\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
-     <None Include="Assets\Packages\Curvy\Base\ClassTemplates\CGModuleEditorTemplate.txt" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardBRDF.cginc" />
-     <None Include="Assets\SFSoftShadows\Resources\SFHDRClamp.shader" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity_5.3.4/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -185,14 +89,17 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>/Applications/Unity_5.3.4/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
- <Reference Include="CurvyEditorIcons">
- <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Packages/Curvy/Base/Editor/Resources/CurvyEditorIcons.dll</HintPath>
- </Reference>
- <Reference Include="LibTessDotNet">
- <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Packages/Curvy/Base/ThirdParty/LibTessDotNet.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity_5.3.4/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.LinuxStandalone.Extensions">
  <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
@@ -202,6 +109,21 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="ES2Editor">
+ <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/Editor/ES2Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="MoodkieSecurity">
+ <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/MoodkieSecurity.dll</HintPath>
+ </Reference>
+ <Reference Include="ES2">
+ <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/ES2.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

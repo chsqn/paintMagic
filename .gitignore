@@ -1,10 +1,10 @@
 # =============== #
 # Unity generated #
 # =============== #
-*./Temp/*
+Temp/
 [Oo]bj/
 [Bb]uild
-*/Library/*
+Library/
 sysinfo.txt
 *.stackdump
 *.apk

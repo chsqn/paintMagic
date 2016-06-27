@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using FluffyUnderware.Curvy;
 using TheKnightsOfUnity.LineRendererPro;
 
 public class DrawingLine : MonoBehaviour 
@@ -275,6 +274,7 @@ public class DrawingLine : MonoBehaviour
 	#region privateAPI
 	void callError()
 	{
+		curveManager.addErrorValue(1);
 		mHasError = true;
 		StartCoroutine(blinkPoints());
 	}
