@@ -11,6 +11,7 @@ public class LinePoint : MonoBehaviour
 
 	#region publicParameter
 	public int 				ID;
+	public TextMesh			idText;
 	public SpriteRenderer 	bgSprite;
 	public GameObject		unlockEffect;
 	public Color			onColor;
@@ -27,6 +28,8 @@ public class LinePoint : MonoBehaviour
 
 	public pointState currentPointState;
 
+	[HideInInspector] public DrawingLine mDrawingLine;
+
 	#endregion publicParameter
 
 	
@@ -35,6 +38,11 @@ public class LinePoint : MonoBehaviour
 	// -----------------------------
 
 	#region privateMember
+	private Ray ray;
+	private Collider coll;
+
+	//shot a ray onto the plane
+	RaycastHit rayHit;
 
 	#endregion privateMember
 
@@ -44,10 +52,33 @@ public class LinePoint : MonoBehaviour
 	// -----------------------------
 
 	#region MonoBehaviour
+	void Awake()
+	{
+		coll = GetComponent<Collider>();
+	}
+
 	void OnEnable()
 	{
 		//set the point to be off at the start
 		turnOff();
+	}
+
+	void Update()
+	{
+		if(Input.GetMouseButton(0))
+		{
+			//get a ray
+			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+			if(Physics.Raycast(ray, out rayHit, 9999999.9f))
+			{
+				//call Error if he hit object wasn't this
+				if(rayHit.collider == coll)
+				{
+					pointTouched();
+				}
+			}
+		}
 	}
 
 	#endregion MonoBehaviour
@@ -58,12 +89,23 @@ public class LinePoint : MonoBehaviour
 	// -----------------------------
 
 	#region publicAPI
-	public void turnOn()
+	/// <summary>
+	/// Called when the point was touched
+	/// </summary>
+	public void pointTouched()
+	{
+		mDrawingLine.pointTouched(this);
+	}
+
+
+	public void turnOn(bool hasEffect = false)
 	{
 		bgSprite.color 		= onColor;
 		currentPointState 	= pointState.isOn;
 		unlockEffect.gameObject.SetActive(true);
-		Instantiate(unlockEffect, this.transform.position, Quaternion.identity);
+
+		if(hasEffect)
+			Instantiate(unlockEffect, this.transform.position, Quaternion.identity);
 	}
 
 	public void turnOff()

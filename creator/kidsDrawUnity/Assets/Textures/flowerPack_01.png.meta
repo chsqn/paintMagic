@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 85bcbc97567a24be9a53a622b167411d
-timeCreated: 1466023213
+timeCreated: 1466963006
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,7 @@ TextureImporter:
     21300004: flowerPack_01_5
     21300006: flowerPack_01_6
     21300008: flowerPack_01_8
+    21300010: flowerPack_01_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,7 +52,6 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
@@ -91,7 +91,6 @@ TextureImporter:
         - {x: 49.96572, y: 26.888428}
         - {x: 63.96572, y: 38.888428}
         - {x: 63.96572, y: 74.88843}
-      tessellationDetail: 0
     - name: flowerPack_01_4
       rect:
         serializedVersion: 2
@@ -104,13 +103,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -131.00612, y: 1366.3055}
-        - {x: -131.00612, y: 1130.3055}
-        - {x: -49.00612, y: -9.694458}
+        - {x: -131.00612, y: 1260.3055}
+        - {x: -32.00612, y: 760.30554}
+        - {x: -59.00612, y: 342.30554}
+        - {x: -19.006119, y: -9.694458}
         - {x: 9.993881, y: -9.694458}
-        - {x: 9.993881, y: 800.30554}
-        - {x: -23.006119, y: 1326.3055}
-        - {x: -94.00612, y: 1366.3055}
-      tessellationDetail: 0
+        - {x: 9.993881, y: 386.30554}
+        - {x: -6.006119, y: 1038.3055}
+        - {x: -69.00612, y: 1308.3055}
+        - {x: -105.00612, y: 1366.3055}
     - name: flowerPack_01_5
       rect:
         serializedVersion: 2
@@ -130,7 +131,6 @@ TextureImporter:
         - {x: 16.669601, y: -10.395508}
         - {x: 16.669601, y: 242.60449}
         - {x: 3.6696014, y: 253.60449}
-      tessellationDetail: 0
     - name: flowerPack_01_6
       rect:
         serializedVersion: 2
@@ -147,7 +147,6 @@ TextureImporter:
         - {x: -11.776794, y: -9.778717}
         - {x: 24.223206, y: -9.778717}
         - {x: 24.223206, y: 742.2213}
-      tessellationDetail: 0
     - name: flowerPack_01_8
       rect:
         serializedVersion: 2
@@ -178,7 +177,29 @@ TextureImporter:
         - {x: 76.13092, y: 14.553619}
         - {x: 81.13092, y: 16.55362}
         - {x: 89.13092, y: 21.55362}
-      tessellationDetail: 0
+    - name: flowerPack_01_0
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 2
+        width: 229
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 77.5, y: 97}
+        - {x: 21.5, y: 101}
+        - {x: -14.5, y: 101}
+        - {x: -82.5, y: 89}
+        - {x: -104.5, y: 41}
+        - {x: -104.5, y: -28}
+        - {x: -82.5, y: -83}
+        - {x: -20.5, y: -110}
+        - {x: 51.5, y: -110}
+        - {x: 72.5, y: -101}
+        - {x: 103.5, y: -51}
+        - {x: 103.5, y: 37}
     outline: []
   spritePackingTag: 
   userData: 

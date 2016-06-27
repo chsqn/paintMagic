@@ -10,7 +10,9 @@ public class CurveManager : MonoBehaviour
 	// -----------------------------
 
 	#region publicParameter
-	public List<DrawingLine> unlockOrder;
+	public AudioSource			audioSource;
+	public AudioClip			audioPointTurnOnSFX;
+	public List<DrawingLine> 	unlockOrder;
 
 	#endregion publicParameter
 
@@ -74,7 +76,7 @@ public class CurveManager : MonoBehaviour
 		currentIndex += 1;
 
 		//wait a bit before we show the next curve
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(0.1f);
 		unlockOrder[currentIndex].gameObject.SetActive(true);
 	}
 

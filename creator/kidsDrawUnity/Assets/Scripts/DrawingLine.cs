@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using FluffyUnderware.Curvy;
-
+using TheKnightsOfUnity.LineRendererPro;
 
 public class DrawingLine : MonoBehaviour 
 {
@@ -12,8 +12,8 @@ public class DrawingLine : MonoBehaviour
 
 	#region publicParameter
 	[Header("-----SETUP----------")]
+	public GameObject			pointPrefab;
 	public CurveManager			curveManager;
-	public CurvySpline			spline;
 	public List<LinePoint>		allPoints;
 	public List<GameObject>		allObjectsToShow;
 	public float				addPitch = 0.2f;
@@ -32,10 +32,11 @@ public class DrawingLine : MonoBehaviour
 
 	#region privateMember
 
-	private int				mLastPointID 	= 0;
+	public int				mLastPointID 	= 0;
 	private bool			mIsDrawing 		= false;
 	private bool			mHasError 		= false;
 
+	private LineRendererPro mLineRenderer;
 
 	private int				mDrawingDirection = 1;
 	private float			mCurrentPitch = 1.0f;
@@ -51,6 +52,8 @@ public class DrawingLine : MonoBehaviour
 	void Awake()
 	{
 		this.transform.parent.gameObject.GetComponent<CurveManager>();
+
+		mLineRenderer = GetComponent<LineRendererPro>();
 	}
 
 	void Update()
@@ -87,15 +90,57 @@ public class DrawingLine : MonoBehaviour
 
 	#region publicAPI
 	/// <summary>
+	/// Called when the "createPoints" button was pressed
+	/// </summary>
+	public void createPoints()
+	{
+		int indexCounter = 0;
+		mLineRenderer = GetComponent<LineRendererPro>();
+
+		//first step through and get all the existing line points and delete them
+		foreach(LinePoint lp in GetComponentsInChildren<LinePoint>(true))
+		{
+			DestroyImmediate(lp.gameObject);
+		}
+
+		//empty the list of all points
+		allPoints.Clear();
+
+
+		//create the new points
+		foreach(LineRendererPro.LinePoint lp in mLineRenderer.linePoints)
+		{
+			print("point " + indexCounter + " is " + lp.position);
+			GameObject newPoint =  Instantiate(pointPrefab, new Vector3(lp.position.x, lp.position.z, lp.position.y - 5.0f), Quaternion.identity) as GameObject;
+
+			//set the new point name and parent it
+
+			newPoint.transform.parent 	= this.transform;
+
+			//add new indexCounter
+			indexCounter 				+= 1;
+
+			//set the linepoint
+			newPoint.gameObject.name 	= "point_" + indexCounter.ToString();
+
+			LinePoint newPointCtrl 		= newPoint.GetComponent<LinePoint>();
+			allPoints.Add(newPointCtrl);
+			newPointCtrl.mDrawingLine	= this;
+			newPointCtrl.idText.text 	= indexCounter.ToString();
+			newPointCtrl.ID 			= indexCounter;
+		}
+	}
+
+	/// <summary>
 	/// Called when the mouse is inside a point
 	/// </summary>
 	public void pointTouched(LinePoint point)
 	{
-		
+
 		//don't do anything if we have a error
 		if(mHasError)
 			return;
-		
+
 		//ONLY continue if the mouse is down
 		if(Input.GetMouseButton(0) == false)
 			return;
@@ -107,6 +152,11 @@ public class DrawingLine : MonoBehaviour
 		//if we are not drawing already we get the drawing direction
 		if(mIsDrawing == false)
 		{
+			mLastPointID 		= 0;
+			mDrawingDirection 	= 1;
+
+			// THIS PART IS FOR FORWARD/BACKWARD TREATMENT
+			/*
 			if(point.ID == 1)
 			{
 				mLastPointID 		= 0;
@@ -118,6 +168,7 @@ public class DrawingLine : MonoBehaviour
 				mLastPointID	  = allPoints.Count + 1;
 				mDrawingDirection = -1;
 			}
+			*/
 		}
 
 		//if the provided ID is not +1 then exit
@@ -130,11 +181,12 @@ public class DrawingLine : MonoBehaviour
 		}
 
 		mCurrentPitch += addPitch;
-		point.unlockSFX.pitch = mCurrentPitch;
-		print("new pitch is " + point.unlockSFX.pitch);
+		curveManager.audioSource.pitch = mCurrentPitch;
+		curveManager.audioSource.PlayOneShot(curveManager.audioPointTurnOnSFX);
+
 
 		//turn the point on
-		point.turnOn();
+
 
 		//turn on is drawing
 		mIsDrawing = true;
@@ -147,9 +199,12 @@ public class DrawingLine : MonoBehaviour
 		if(mLastPointID + mDrawingDirection > allPoints.Count || 
 			mLastPointID + mDrawingDirection <= 0)
 		{
+			point.turnOn(true);
 			curveManager.unlockNext(this);
-
 			resetDrawing();
+		} else
+		{
+			point.turnOn();
 		}
 	}
 
@@ -187,6 +242,7 @@ public class DrawingLine : MonoBehaviour
 				callError();
 			}
 
+			/*
 			float nearestTF = spline.GetNearestPointTF(rayHit.point);
 
 			float distToSpline = (spline.transform.TransformPoint(spline.Interpolate(nearestTF)) - rayHit.point).magnitude;
@@ -196,6 +252,7 @@ public class DrawingLine : MonoBehaviour
 				print("ERROR: dist to spline is " + distToSpline);
 				callError();
 			}
+			*/
 		} else
 		{
 			print("now calling error because we didn't touch anything");

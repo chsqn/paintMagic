@@ -8,6 +8,7 @@ public class ButterflyCtrl : MonoBehaviour
 	// -----------------------------
 
 	#region publicParameter
+	public ParticleSystem	touchedPSystem;
 	public Transform 		targetPos;
 	public Transform		moverTrans;
 	public Animator  		butterflyAnim;
@@ -138,6 +139,8 @@ public class ButterflyCtrl : MonoBehaviour
 
 		if(mIsTouched)
 			return;
+
+		Instantiate(touchedPSystem.gameObject, moverTrans.position, touchedPSystem.transform.rotation);
 
 		mIsTouched = true;
 		mLerpValue =  0.0f;
