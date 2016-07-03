@@ -42,7 +42,7 @@ SubShader {
 				v2f o;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.texcoord.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
-				o.texcoord.zw = TRANSFORM_TEX(v.texcoord2, _MainTex);
+				o.texcoord.zw = v.texcoord2;
 				o.color = v.color;
 				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;

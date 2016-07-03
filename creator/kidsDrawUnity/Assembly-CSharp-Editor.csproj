@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Camera Fit\Editor\CameraFitEditor.cs" />
      <Compile Include="Assets\Editor\DrawingLineEditor.cs" />
+     <Compile Include="Assets\Editor\MeshRendererSortingLayersEditor.cs" />
      <Compile Include="Assets\Line Renderer Pro\Editor\LineRendererProEditor.cs" />
      <Compile Include="Assets\Line Renderer Pro\Editor\LineRendererProStandardShaderGUI.cs" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardMeta.cginc" />
@@ -62,7 +63,10 @@
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardUtils.cginc" />
+     <None Include="Assets\Shaders\unlitAdditive.shader" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardShadow.cginc" />
+     <None Include="Assets\Shaders\3DText.shader" />
+     <None Include="Assets\Shaders\Standard2Sided.shader" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardConfig.cginc" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardBRDF.cginc" />
  <Reference Include="UnityEditor.Advertisements">
@@ -89,6 +93,15 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>/Applications/Unity_5.3.4/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
+ <Reference Include="ES2">
+ <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/ES2.dll</HintPath>
+ </Reference>
+ <Reference Include="MoodkieSecurity">
+ <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/MoodkieSecurity.dll</HintPath>
+ </Reference>
+ <Reference Include="ES2Editor">
+ <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/Editor/ES2Editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity_5.3.4/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -109,15 +122,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="ES2Editor">
- <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/Editor/ES2Editor.dll</HintPath>
- </Reference>
- <Reference Include="MoodkieSecurity">
- <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/MoodkieSecurity.dll</HintPath>
- </Reference>
- <Reference Include="ES2">
- <HintPath>/proj/paintMagic/creator/kidsDrawUnity/Assets/Plugins/ES2.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity_5.3.4/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

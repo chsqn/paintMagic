@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: d4d4d89b732b84a70b4dfee10cf1977c
+timeCreated: 1467549949
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: collectibleCards_0
+    21300002: collectibleCards_1
+    21300004: collectibleCards_2
+    21300006: collectibleCards_3
+    21300008: collectibleCards_4
+    21300010: collectibleCards_5
+    21300012: collectibleCards_6
+    21300014: collectibleCards_7
+    21300016: collectibleCards_8
+    21300018: collectibleCards_9
+    21300020: collectibleCards_10
+    21300022: collectibleCards_11
+    21300024: collectibleCards_12
+    21300026: collectibleCards_13
+    21300028: collectibleCards_14
+    21300030: collectibleCards_15
+    21300032: collectibleCards_16
+    21300034: collectibleCards_17
+    21300036: collectibleCards_18
+    21300038: collectibleCards_19
+    21300040: collectibleCards_20
+    21300042: collectibleCards_21
+    21300044: collectibleCards_22
+    21300046: collectibleCards_23
+    21300048: collectibleCards_24
+    21300050: collectibleCards_25
+    21300052: collectibleCards_26
+    21300054: collectibleCards_27
+    21300056: collectibleCards_28
+    21300058: collectibleCards_29
+    21300060: collectibleCards_30
+    21300062: collectibleCards_31
+    21300064: collectibleCards_32
+    21300066: collectibleCards_33
+    21300068: collectibleCards_34
+    21300070: collectibleCards_35
+    21300072: collectibleCards_36
+    21300074: collectibleCards_37
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: collectibleCards_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_2
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_3
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_4
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_5
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_6
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 497
+        width: 97
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 263.5}
+        - {x: -48.5, y: 260.5}
+        - {x: -48.5, y: -259.5}
+        - {x: -45.5, y: -263.5}
+        - {x: 45.5, y: -263.5}
+        - {x: 48.5, y: -258.5}
+        - {x: 48.5, y: 258.5}
+        - {x: 42.5, y: 263.5}
+    - name: collectibleCards_7
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_8
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_9
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 892
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_11
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_12
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_13
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_14
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_15
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_16
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_17
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_18
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 760
+        width: 96
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 65.5}
+        - {x: -48, y: -65.5}
+        - {x: 48, y: -65.5}
+        - {x: 48, y: 65.5}
+    - name: collectibleCards_19
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 497
+        width: 96
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 131}
+        - {x: -48, y: 128}
+        - {x: -48, y: -129}
+        - {x: -45, y: -131}
+        - {x: 46, y: -131}
+        - {x: 48, y: -128}
+        - {x: 48, y: 129}
+        - {x: 46, y: 131}
+    - name: collectibleCards_20
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 497
+        width: 96
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 131}
+        - {x: -48, y: 129}
+        - {x: -48, y: -129}
+        - {x: -45, y: -131}
+        - {x: 45, y: -131}
+        - {x: 48, y: -127}
+        - {x: 48, y: 128}
+        - {x: 46, y: 131}
+    - name: collectibleCards_21
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 497
+        width: 97
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 131}
+        - {x: -48.5, y: 126}
+        - {x: -48.5, y: -125}
+        - {x: -47.5, y: -127}
+        - {x: -44.5, y: -131}
+        - {x: 46.5, y: -131}
+        - {x: 48.5, y: -129}
+        - {x: 48.5, y: 129}
+        - {x: 45.5, y: 131}
+    - name: collectibleCards_22
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 497
+        width: 96
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 131}
+        - {x: -48, y: 129}
+        - {x: -48, y: -129}
+        - {x: -45, y: -131}
+        - {x: 45, y: -131}
+        - {x: 48, y: -127}
+        - {x: 48, y: 128}
+        - {x: 46, y: 131}
+    - name: collectibleCards_23
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 497
+        width: 97
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 131}
+        - {x: -48.5, y: 126}
+        - {x: -48.5, y: -125}
+        - {x: -47.5, y: -127}
+        - {x: -44.5, y: -131}
+        - {x: 46.5, y: -131}
+        - {x: 48.5, y: -129}
+        - {x: 48.5, y: 129}
+        - {x: 45.5, y: 131}
+    - name: collectibleCards_24
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 497
+        width: 96
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 131}
+        - {x: -48, y: 129}
+        - {x: -48, y: -129}
+        - {x: -45, y: -131}
+        - {x: 45, y: -131}
+        - {x: 48, y: -127}
+        - {x: 48, y: 128}
+        - {x: 46, y: 131}
+    - name: collectibleCards_25
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 497
+        width: 96
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 131}
+        - {x: -48, y: 129}
+        - {x: -48, y: -129}
+        - {x: -45, y: -131}
+        - {x: 45, y: -131}
+        - {x: 48, y: -127}
+        - {x: 48, y: 128}
+        - {x: 46, y: 131}
+    - name: collectibleCards_26
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 497
+        width: 97
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 131}
+        - {x: -48.5, y: 126}
+        - {x: -48.5, y: -125}
+        - {x: -47.5, y: -127}
+        - {x: -44.5, y: -131}
+        - {x: 46.5, y: -131}
+        - {x: 48.5, y: -129}
+        - {x: 48.5, y: 129}
+        - {x: 45.5, y: 131}
+    - name: collectibleCards_27
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 497
+        width: 96
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 131}
+        - {x: -48, y: 129}
+        - {x: -48, y: -129}
+        - {x: -45, y: -131}
+        - {x: 45, y: -131}
+        - {x: 48, y: -127}
+        - {x: 48, y: 128}
+        - {x: 46, y: 131}
+    - name: collectibleCards_28
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 103
+        width: 96
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 196.5}
+        - {x: -48, y: 193.5}
+        - {x: -48, y: -192.5}
+        - {x: -45, y: -196.5}
+        - {x: 46, y: -196.5}
+        - {x: 48, y: -193.5}
+        - {x: 48, y: 194.5}
+        - {x: 46, y: 196.5}
+    - name: collectibleCards_29
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 103
+        width: 97
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 196.5}
+        - {x: -48.5, y: 192.5}
+        - {x: -48.5, y: -190.5}
+        - {x: -47.5, y: -192.5}
+        - {x: -43.5, y: -196.5}
+        - {x: 45.5, y: -196.5}
+        - {x: 48.5, y: -192.5}
+        - {x: 48.5, y: 193.5}
+        - {x: 46.5, y: 196.5}
+    - name: collectibleCards_30
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 103
+        width: 97
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 196.5}
+        - {x: -48.5, y: 191.5}
+        - {x: -48.5, y: -190.5}
+        - {x: -47.5, y: -192.5}
+        - {x: -44.5, y: -196.5}
+        - {x: 46.5, y: -196.5}
+        - {x: 48.5, y: -193.5}
+        - {x: 48.5, y: 193.5}
+        - {x: 44.5, y: 196.5}
+    - name: collectibleCards_31
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 103
+        width: 96
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 196.5}
+        - {x: -48, y: 194.5}
+        - {x: -48, y: -192.5}
+        - {x: -44, y: -196.5}
+        - {x: 45, y: -196.5}
+        - {x: 48, y: -192.5}
+        - {x: 48, y: 193.5}
+        - {x: 46, y: 196.5}
+    - name: collectibleCards_32
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 103
+        width: 97
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 196.5}
+        - {x: -48.5, y: 191.5}
+        - {x: -48.5, y: -190.5}
+        - {x: -47.5, y: -192.5}
+        - {x: -44.5, y: -196.5}
+        - {x: 46.5, y: -196.5}
+        - {x: 48.5, y: -193.5}
+        - {x: 48.5, y: 193.5}
+        - {x: 44.5, y: 196.5}
+    - name: collectibleCards_33
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 103
+        width: 96
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 196.5}
+        - {x: -48, y: 194.5}
+        - {x: -48, y: -192.5}
+        - {x: -44, y: -196.5}
+        - {x: 45, y: -196.5}
+        - {x: 48, y: -192.5}
+        - {x: 48, y: 193.5}
+        - {x: 46, y: 196.5}
+    - name: collectibleCards_34
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 103
+        width: 97
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 196.5}
+        - {x: -48.5, y: 192.5}
+        - {x: -48.5, y: -192.5}
+        - {x: -45.5, y: -196.5}
+        - {x: 45.5, y: -196.5}
+        - {x: 48.5, y: -191.5}
+        - {x: 48.5, y: 192.5}
+        - {x: 43.5, y: 196.5}
+    - name: collectibleCards_35
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 103
+        width: 96
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 196.5}
+        - {x: -48, y: 194.5}
+        - {x: -48, y: -192.5}
+        - {x: -44, y: -196.5}
+        - {x: 45, y: -196.5}
+        - {x: 48, y: -192.5}
+        - {x: 48, y: 193.5}
+        - {x: 46, y: 196.5}
+    - name: collectibleCards_36
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 103
+        width: 97
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 196.5}
+        - {x: -48.5, y: 191.5}
+        - {x: -48.5, y: -190.5}
+        - {x: -47.5, y: -192.5}
+        - {x: -44.5, y: -196.5}
+        - {x: 46.5, y: -196.5}
+        - {x: 48.5, y: -193.5}
+        - {x: 48.5, y: 193.5}
+        - {x: 44.5, y: 196.5}
+    - name: collectibleCards_37
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 103
+        width: 96
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 196.5}
+        - {x: -48, y: 194.5}
+        - {x: -48, y: -192.5}
+        - {x: -44, y: -196.5}
+        - {x: 45, y: -196.5}
+        - {x: 48, y: -192.5}
+        - {x: 48, y: 193.5}
+        - {x: 46, y: 196.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

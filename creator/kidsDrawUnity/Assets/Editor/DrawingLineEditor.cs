@@ -20,9 +20,9 @@ public class DrawingLineEditor : Editor
 	void DrawExtraGUI(DrawingLine script)
 	{
 
-		if(GUILayout.Button("Create Points"))
+		if(GUILayout.Button("Create Line"))
 		{
-			script.createPoints();
+			script.createLine();
 		}
 	}
 
