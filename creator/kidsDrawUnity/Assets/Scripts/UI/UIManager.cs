@@ -11,13 +11,22 @@ public class UIManager : MonoBehaviour
 	// Static singleton property
 	public static UIManager Instance { get; private set; }
 
+	[Header("--------SOUNDS----------")]
+	public AudioSource	audioSourceSFX;
+	public AudioClip	clickSFX;
+	public AudioClip	swipeSFX;
+
+	[Header("----------MAIN----------")]
 	public Transform	panelMoverTrans;
 	public Transform 	playButtonTrans;
 	public Transform	leftButtonTrans;
 
 	public float[]		panelPositions;
+
+	[Header("-------COLLECTIBLE--------")]
 	public Transform	collectibleCardsContainer;
 	public Transform	collectibleCardBtnPrefab;
+	public GameObject	collectibleBackgroundObj;
 
 	#endregion publicParameter
 	
@@ -28,6 +37,7 @@ public class UIManager : MonoBehaviour
 	#region privateMember
 	private int 		mCurrentWorldMapIndex = 0;
 	public 	string 		mLevelToLoad;
+	private GameObject	mCurrentCollectible;
 	#endregion privateMember
 
 
@@ -81,6 +91,40 @@ public class UIManager : MonoBehaviour
 	// -----------------------------
 	#region Button Presses
 	/// <summary>
+	/// Shows the collectibel along with the black background
+	/// </summary>
+	public void showCollectible(int levelIndex, Vector3 startPos)
+	{
+		//show the black background
+		collectibleBackgroundObj.SetActive(true);
+
+		//instantiate the collectible
+		mCurrentCollectible =  Instantiate(GameManager.Instance.getCollectibleObj(), startPos, Quaternion.identity) as GameObject;
+
+		TweenHelper.unhideAndScale(mCurrentCollectible, Vector3.zero, Vector3.one, 0.4f, iTween.EaseType.easeOutBack, "none", this.gameObject);
+		TweenHelper.moveWorld(mCurrentCollectible, new Vector3(Camera.main.transform.position.x, 0.0f, Camera.main.transform.position.z + 50.0f), 0.4f, iTween.EaseType.easeOutBack, "none", this.gameObject);
+
+		//activate the collectible so we can play with it
+		CollectibleCtrl collectCtrl = mCurrentCollectible.GetComponentInChildren<CollectibleCtrl>(true);
+
+		collectCtrl.gameObject.SetActive(true);
+	}
+
+	public void hideCollectible()
+	{
+		//play the click sound
+		audioSourceSFX.PlayOneShot(clickSFX);
+
+		//hide the black background
+		collectibleBackgroundObj.SetActive(false);
+
+		//destroy the collectible
+		if(mCurrentCollectible != null)
+			Destroy(mCurrentCollectible);
+
+	}
+
+	/// <summary>
 	/// Called when the play button get's pressed
 	/// </summary>
 	public void playButtonPressed()
@@ -88,9 +132,13 @@ public class UIManager : MonoBehaviour
 		//IF the play button doesn't have a level we show the worldmap
 		if(mLevelToLoad == "")
 		{
+			print("now playing click sound");
+			audioSourceSFX.PlayOneShot(clickSFX);
+			audioSourceSFX.PlayOneShot(swipeSFX);
 			showWorldMap();
 		} else
 		{
+			audioSourceSFX.PlayOneShot(clickSFX);
 			//else load the level
 			Application.LoadLevel(mLevelToLoad);
 		}
@@ -102,6 +150,9 @@ public class UIManager : MonoBehaviour
 	/// </summary>
 	public void levelToggleButtonPressed(UI_LevelButton levelBtn)
 	{
+		//play the click button sound
+		audioSourceSFX.PlayOneShot(clickSFX);
+
 		if(levelBtn.toggleBtn.isOn == true)
 		{
 			//only show the button again if it isn't already there
@@ -124,21 +175,33 @@ public class UIManager : MonoBehaviour
 	#region publicAPI
 	public void showMainMenu()
 	{
+		audioSourceSFX.PlayOneShot(clickSFX);
+		audioSourceSFX.PlayOneShot(swipeSFX);
 		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[0], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
 	}
 
+	public void showCollectibleMenu()
+	{
+		audioSourceSFX.PlayOneShot(clickSFX);
+		audioSourceSFX.PlayOneShot(swipeSFX);
+		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[1], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
+	}
 
 	/// <summary>
 	/// Shows the world map.
 	/// </summary>
 	public void showWorldMap()
 	{
-		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[1], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
+		audioSourceSFX.PlayOneShot(clickSFX);
+		audioSourceSFX.PlayOneShot(swipeSFX);
+		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[2], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
 	}
 
 	public void showLevelMap()
 	{
-		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[2], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
+		audioSourceSFX.PlayOneShot(clickSFX);
+		audioSourceSFX.PlayOneShot(swipeSFX);
+		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[3], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
 	}
 
 	/// <summary>

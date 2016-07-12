@@ -1,24 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CurveManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Props/CrystalCtrl.cs">
     <Files>
-      <File FileName="Assets/Scripts/DrawingLine.cs" Line="1" Column="1" />
       <File FileName="Assets/Editor/DrawingLineEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ButterflyCtrl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Mathfx.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScaleEffectAnimator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DEBUG_drawCube.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ColorPaletteManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UIManager.cs" Line="218" Column="1" />
-      <File FileName="../../../hazmatHarry/hazmatHarryUnity/Assets/Editor/RopeCreatorEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Line Renderer Pro/Scripts/LineRendererPro.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LinePoint.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CurveManager.cs" Line="108" Column="125" />
-      <File FileName="Assets/Scripts/DestroyParticlesAfterDuration.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RandomizePitch.cs" Line="1" Column="1" />
-      <File FileName="Assets/Shaders/Standard2Sided.shader" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GlowWormBehaviour.cs" Line="76" Column="70" />
-      <File FileName="Assets/Scripts/UI_worldMap.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Base/GameManager.cs" Line="80" Column="60" />
+      <File FileName="Assets/Scripts/UI/UI_CollectibleBtn.cs" Line="50" Column="70" />
+      <File FileName="Assets/Scripts/Props/CrystalCtrl.cs" Line="59" Column="26" />
+      <File FileName="Assets/Scripts/UI/UIManager.cs" Line="105" Column="42" />
+      <File FileName="../../../hazmatHarry/hazmatHarryUnity/Assets/_Scripts/General/GameManager/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Props/GlowWormBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Base/DrawingLine.cs" Line="57" Column="59" />
+      <File FileName="Assets/Scripts/Base/LevelManager.cs" Line="128" Column="108" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +18,10 @@
           <Node name="kidsDrawUnity" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="CurveManager.cs" selected="True" />
+                <Node name="Props" expanded="True">
+                  <Node name="CrystalCtrl.cs" selected="True" />
+                </Node>
+                <Node name="UI" expanded="True" />
               </Node>
             </Node>
           </Node>

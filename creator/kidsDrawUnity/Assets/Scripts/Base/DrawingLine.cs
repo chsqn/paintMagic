@@ -32,7 +32,7 @@ public class DrawingLine : MonoBehaviour
 
 	#region privateMember
 	public int				mLastPointID 	= 0;
-	private CurveManager	mCurveManager;
+	private LevelManager	mLevelManager;
 	private bool			mIsDrawing 		= false;
 	private bool			mHasError 		= false;
 
@@ -51,10 +51,10 @@ public class DrawingLine : MonoBehaviour
 	#region MonoBehaviour
 	void Awake()
 	{
-		this.transform.parent.gameObject.GetComponent<CurveManager>();
+		this.transform.parent.gameObject.GetComponent<LevelManager>();
 
 		mLineRenderer = GetComponent<LineRenderer>();
-		mCurveManager = GameObject.FindObjectOfType<CurveManager>();
+		mLevelManager = GameObject.FindObjectOfType<LevelManager>();
 	}
 
 	void OnEnable()
@@ -185,8 +185,8 @@ public class DrawingLine : MonoBehaviour
 		}
 
 		mCurrentPitch += addPitch;
-		mCurveManager.audioSource.pitch = mCurrentPitch;
-		mCurveManager.audioSource.PlayOneShot(mCurveManager.audioPointTurnOnSFX);
+		mLevelManager.audioSource.pitch = mCurrentPitch;
+		mLevelManager.audioSource.PlayOneShot(mLevelManager.audioPointTurnOnSFX);
 
 
 		//turn the point on
@@ -204,7 +204,7 @@ public class DrawingLine : MonoBehaviour
 			mLastPointID + mDrawingDirection <= 0)
 		{
 			point.turnOn(true);
-			mCurveManager.unlockNext(this);
+			mLevelManager.unlockNext(this);
 			resetDrawing();
 		} else
 		{
@@ -279,7 +279,7 @@ public class DrawingLine : MonoBehaviour
 	#region privateAPI
 	void callError()
 	{
-		mCurveManager.addErrorValue(1);
+		mLevelManager.addErrorValue(1);
 		mHasError = true;
 		StartCoroutine(blinkPoints());
 	}

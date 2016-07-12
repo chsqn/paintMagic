@@ -13,6 +13,8 @@ ModelImporter:
     100010: astroturf2MeshGroup2
     100012: polySurface1
     100014: polySurface2
+    100016: env_grass
+    100018: env_ground
     400000: grassCarpet1Main
     400002: grassCarpet1Main_MeshPart0
     400004: grassCarpet1Main_MeshPart1
@@ -21,24 +23,32 @@ ModelImporter:
     400010: astroturf2MeshGroup2
     400012: polySurface1
     400014: polySurface2
+    400016: env_grass
+    400018: env_ground
     2300000: grassCarpet1Main_MeshPart0
     2300002: grassCarpet1Main_MeshPart1
     2300004: pSphere1
     2300006: astroturf2MeshGroup2
     2300008: polySurface1
     2300010: polySurface2
+    2300012: env_grass
+    2300014: env_ground
     3300000: grassCarpet1Main_MeshPart0
     3300002: grassCarpet1Main_MeshPart1
     3300004: pSphere1
     3300006: astroturf2MeshGroup2
     3300008: polySurface1
     3300010: polySurface2
+    3300012: env_grass
+    3300014: env_ground
     4300000: grassCarpet1Main_MeshPart0
     4300002: grassCarpet1Main_MeshPart1
     4300004: pSphere1
     4300006: astroturf2MeshGroup2
     4300008: polySurface1
     4300010: polySurface2
+    4300012: env_ground
+    4300014: env_grass
   materials:
     importMaterials: 0
     materialName: 0

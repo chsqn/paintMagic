@@ -105,8 +105,16 @@ public class LinePoint : MonoBehaviour
 		currentPointState 	= pointState.isOn;
 		unlockEffect.gameObject.SetActive(true);
 
+		//scale up the point a bit and back
+		TweenHelper.scaleLocal(this.gameObject, new Vector3(1.5f,1.5f,1.5f), 0.1f, iTween.EaseType.easeOutCubic, "scalePointBack", this.gameObject);
+
 		if(hasEffect)
 			Instantiate(unlockEffect, this.transform.position, Quaternion.identity);
+	}
+
+	void scalePointBack()
+	{
+		TweenHelper.scaleLocal(this.gameObject, Vector3.one, 0.1f, iTween.EaseType.easeInCubic, "none", this.gameObject);
 	}
 
 	public void turnOff()

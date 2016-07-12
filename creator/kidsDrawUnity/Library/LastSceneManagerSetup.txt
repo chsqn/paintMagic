@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/mainUI/mainUI.unity
+- path: Assets/Scenes/Levels/Flowers/flowers_01.unity
   isLoaded: 1
   isActive: 1

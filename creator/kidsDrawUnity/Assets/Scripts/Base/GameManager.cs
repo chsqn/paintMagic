@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance { get; private set; }	
 
 	public LevelSettings[] 	allLevelSettings;
+
+	public int				currentLevelIndex;
 	#endregion publicParameter
 
 		
@@ -52,10 +54,19 @@ public class GameManager : MonoBehaviour
 
 		saveFileName = Application.persistentDataPath + "/SavesDir/saveData.sav";
 
-		ES2.Save(123, saveFileName);
+		//load the data on awake IF the file exists
+		if(ES2.Exists(saveFileName))
+		{
+			print ("------- LOADING DATA FROM FILE --------");
+			loadData();
+		} 
+
 	}
 
-
+	void OnApplicationQuit()
+	{
+		saveData();
+	}
 	#endregion MonoBehaviour
 
 		
@@ -64,6 +75,51 @@ public class GameManager : MonoBehaviour
 	// -----------------------------
 
 	#region publicAPI
+	public GameObject getCollectibleObj()
+	{
+		return allLevelSettings[currentLevelIndex].collectibleObj;
+	}
+
+	/// <summary>
+	/// Called when the user pressed the homebtn
+	/// </summary>
+	public void loadMainUI()
+	{
+		print("now loading mainUI");
+		Application.LoadLevel("mainUI");
+	}
+
+	/// <summary>
+	/// Saves the data.
+	/// </summary>
+	public void saveData()
+	{
+		using(ES2Writer writer = ES2Writer.Create(saveFileName))
+		{
+			for(int i = 0; i < allLevelSettings.Length; i++)
+			{
+				print("now saving level " + i);
+				allLevelSettings[i].saveData(i, writer);
+			}
+
+			// Remember to save when we're done.
+			writer.Save();
+		}
+	}
+
+	/// <summary>
+	/// Loads the data.
+	/// </summary>
+	public void loadData()
+	{
+		using(ES2Reader reader = ES2Reader.Create(GameManager.Instance.saveFileName))
+		{
+			for(int i = 0; i < allLevelSettings.Length; i++)
+			{
+				allLevelSettings[i].loadData(i, reader);
+			}
+		}
+	}
 
 	#endregion
 
@@ -80,36 +136,30 @@ public class GameManager : MonoBehaviour
 [Serializable]
 public class LevelSettings
 {
-	public GameObject	levelObj;   //the object that should be unlocked in the level
+	public GameObject	collectibleObj;   //the object that should be unlocked in the level
 	public bool			isLocked = true;
 	public Sprite		unlockedTexture;
 	public Sprite 		lockedTexture;
 
 
 
-	public void saveData(int index)
+	public void saveData(int index, ES2Writer writer)
 	{
-		using(ES2Writer writer = ES2Writer.Create(GameManager.Instance.saveFileName))
-		{
-			// Write our data to the file.
-			writer.Write(isLocked, "isLocked_" + index.ToString());
-		}
-
+		// Write our data to the file.
+		writer.Write(isLocked, "isLocked_" + index.ToString());
 	}
 
-	public void loadData(int index)
+	public void loadData(int index, ES2Reader reader)
 	{
-		using(ES2Reader reader = ES2Reader.Create(GameManager.Instance.saveFileName))
-		{
-			if(ES2.Exists(GameManager.Instance.saveFileName))
-			{
-				// Read data from the file.
-				if(ES2.Exists("isLocked_" + index.ToString()))
-				{
-					isLocked			= reader.Read<bool>("isLocked_" + index.ToString());
-				}
-			}
-		}
+		// Read data from the file.
+		isLocked			= reader.Read<bool>("isLocked_" + index.ToString());
+	}
 
+	/// <summary>
+	/// Unlocks the level.
+	/// </summary>
+	public void unlockLevel()
+	{
+		isLocked = false;
 	}
 }

@@ -29,6 +29,10 @@ public class UI_CollectibleBtn : MonoBehaviour
 	// -----------------------------
 
 	#region MonoBehaviour
+	void OnEnable()
+	{
+		button.onClick.AddListener(() => showCollectible());
+	}
 
 	#endregion MonoBehaviour
 
@@ -43,14 +47,15 @@ public class UI_CollectibleBtn : MonoBehaviour
 	/// </summary>
 	public void showCollectible()
 	{
-		
+		UIManager.Instance.showCollectible(indexID, this.transform.position);
+
+		//play the click sound and the woosh sound
+		UIManager.Instance.audioSourceSFX.PlayOneShot(UIManager.Instance.clickSFX);
+		UIManager.Instance.audioSourceSFX.PlayOneShot(UIManager.Instance.swipeSFX);
 	}
 
 	public void UpdateButton()
 	{
-		//load the data from that level
-		GameManager.Instance.allLevelSettings[indexID].loadData(indexID);
-
 		//check if it is locked
 		if(GameManager.Instance.allLevelSettings[indexID].isLocked)
 		{
