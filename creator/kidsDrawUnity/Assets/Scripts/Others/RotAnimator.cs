@@ -1,23 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyParticlesAfterDuration : MonoBehaviour 
+public class RotAnimator : MonoBehaviour 
 {
 	// -----------------------------
 	//	public parameter
 	// -----------------------------
 
 	#region publicParameter
-
+	public AnimationCurve 	animCurve;
+	public float			animSpeed;
+	public float			rotValue = 1.0f;
 	#endregion publicParameter
 
-		
+	
 	// -----------------------------
 	//	private datamember
 	// -----------------------------
 
 	#region privateMember
-	private ParticleSystem mPSystem;
+	private float mLerpValue = 0.0f;
 	#endregion privateMember
 
 
@@ -26,18 +28,16 @@ public class DestroyParticlesAfterDuration : MonoBehaviour
 	// -----------------------------
 
 	#region MonoBehaviour
-	void Awake()
+	void Update()
 	{
-		mPSystem = GetComponent<ParticleSystem>();
+		mLerpValue += (Time.deltaTime * animSpeed);
+		//this.transform.rotation = Quaternion.Euler(new Vector3(0.0f, 0.0f, animCurve.Evaluate(mLerpValue) * rotValue));
+		this.transform.Rotate( new Vector3(0.0f, 0.0f, animCurve.Evaluate(mLerpValue) * rotValue));
 	}
 
-	void OnEnable()
-	{
-		StartCoroutine(destroyAfter(mPSystem.duration));
-	}
 	#endregion MonoBehaviour
 
-		
+	
 	// -----------------------------
 	//	public api
 	// -----------------------------
@@ -46,17 +46,13 @@ public class DestroyParticlesAfterDuration : MonoBehaviour
 
 	#endregion
 
-		
+	
 	// -----------------------------
 	//	private api
 	// -----------------------------
 
 	#region privateAPI
-	IEnumerator destroyAfter(float waitingTime)
-	{
-		yield return new WaitForSeconds(waitingTime * 2.0f);
-		Destroy(this.gameObject);
-	}
 
 	#endregion
+
 }

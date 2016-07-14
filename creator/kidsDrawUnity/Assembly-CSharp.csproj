@@ -75,8 +75,10 @@
      <Compile Include="Assets\Scripts\Others\CollectibleSpawningBehaviour.cs" />
      <Compile Include="Assets\Scripts\Others\DestroyParticlesAfterDuration.cs" />
      <Compile Include="Assets\Scripts\Others\RandomizePitch.cs" />
+     <Compile Include="Assets\Scripts\Others\RotAnimator.cs" />
      <Compile Include="Assets\Scripts\Others\RotateAround.cs" />
      <Compile Include="Assets\Scripts\Others\ScaleEffectAnimator.cs" />
+     <Compile Include="Assets\Scripts\Others\TouchAnimator.cs" />
      <Compile Include="Assets\Scripts\Props\ButterflyCtrl.cs" />
      <Compile Include="Assets\Scripts\Props\CollectibleCtrl.cs" />
      <Compile Include="Assets\Scripts\Props\CrystalCtrl.cs" />

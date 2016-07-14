@@ -91,6 +91,12 @@ public class GameManager : MonoBehaviour
 			allLevelSettings[i].hasCollectibleAchieved = false;
 		}
 
+		//reset all collectibles
+		foreach(LevelSettings ls in allLevelSettings)
+		{
+			ls.hasCollectibleAchieved = false;
+		}
+
 		//save the data
 		saveData();
 
@@ -201,13 +207,7 @@ public class LevelSettings
 		hasCollectibleAchieved	= reader.Read<bool>("hasCollectibleAchieved_" + index.ToString());
 	}
 
-	/// <summary>
-	/// Unlocks the level.
-	/// </summary>
-	public void unlockLevel()
-	{
-		isLocked = false;
-	}
+
 
 	/// <summary>
 	/// Unlocks the collectible.

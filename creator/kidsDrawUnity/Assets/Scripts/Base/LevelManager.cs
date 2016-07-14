@@ -109,7 +109,7 @@ public class LevelManager : MonoBehaviour
 		int currentLevelIndex = GameManager.Instance.currentLevelIndex;
 
 		//unlock the collectible in the gameManager
-		GameManager.Instance.allLevelSettings[currentLevelIndex].unlockLevel();
+		GameManager.Instance.allLevelSettings[currentLevelIndex].unlockCollectible();
 
 		//instantiate the collectible and parent it to the collectible container
 		GameObject newCollectible = Instantiate(GameManager.Instance.getCollectibleObj(currentLevelIndex), collectibleSpawnPosTrans.position, Quaternion.identity) as GameObject;

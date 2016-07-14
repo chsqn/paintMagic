@@ -58,6 +58,11 @@ public class UI_LevelButton : MonoBehaviour
 	//	public api
 	// -----------------------------
 	#region publicAPI
+	public void playButtonPressed()
+	{
+		Application.LoadLevel("level_" + (levelIndex+1).ToString("00"));	
+	}
+
 	/// <summary>
 	/// Get's called when we create the levelCardBtn and it is locked
 	/// </summary>

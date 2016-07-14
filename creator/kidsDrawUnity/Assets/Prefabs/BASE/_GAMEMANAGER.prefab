@@ -42,132 +42,165 @@ MonoBehaviour:
   allLevelSettings:
   - collectibleObj: {fileID: 183734, guid: 71332039023ad48029947c8bf4ce70a8, type: 2}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300006, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300004, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
   - collectibleObj: {fileID: 0}
     isLocked: 1
+    hasCollectibleAchieved: 0
     unlockedTexture: {fileID: 21300002, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
     lockedTexture: {fileID: 21300000, guid: d4d4d89b732b84a70b4dfee10cf1977c, type: 3}
+  lockedLevelFrom: 12
   currentLevelIndex: 0
   saveFileName: 
 --- !u!1001 &100100000

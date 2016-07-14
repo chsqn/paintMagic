@@ -35,6 +35,17 @@ public class TweenHelper : MonoBehaviour
 	// -----------------------------
 
 	#region publicAPI
+	public static void punchScale(GameObject inputObject, Vector3 amount, float time, string onCompleteCall, GameObject objectCaller)
+	{
+		iTween.PunchScale(inputObject, iTween.Hash("amount", amount, "time", time, "onComplete", onCompleteCall, "onCompleteTarget", objectCaller));
+	}
+
+
+	public static void rotateAdd(GameObject objectToRotate, Vector3 rotAmount, float rotTime, iTween.EaseType inputEasyType, string onCompleteCall, GameObject objectCaller)
+	{
+		iTween.RotateAdd(objectToRotate, iTween.Hash("amount", rotAmount, "time", rotTime, "easeType", inputEasyType, "onComplete", onCompleteCall, "onCompleteTarget", objectCaller));
+	}
+
 	public static void scaleLocal(GameObject menuToScale, Vector3 scaleAmount, float scaleTime, iTween.EaseType inputEasyType, string onCompleteCall, GameObject objectCaller)
 	{
 		iTween.ScaleTo(menuToScale, iTween.Hash("scale", scaleAmount, "islocal", true, "time", scaleTime, "easeType", inputEasyType, "ignoretimescale", true, "oncomplete",onCompleteCall, "onCompleteTarget", objectCaller));
