@@ -17,16 +17,15 @@ public class UIManager : MonoBehaviour
 	public AudioClip	swipeSFX;
 
 	[Header("----------MAIN----------")]
-	public Transform	panelMoverTrans;
-	public Transform 	playButtonTrans;
-	public Transform	leftButtonTrans;
+	public GameObject	mainPanelObj;
+	public GameObject	levelSelectPanelObj;
 
-	public float[]		panelPositions;
+	[Header("-------LEVEL CARDS -------")]
+	public GameObject	levelCardPrefab;
+	public GameObject	levelCardContainer;
 
-	[Header("-------COLLECTIBLE--------")]
-	public Transform	collectibleCardsContainer;
-	public Transform	collectibleCardBtnPrefab;
-	public GameObject	collectibleBackgroundObj;
+	[Header("-------COLLECTIBLES -------")]
+	public GameObject 	collectibleBackgroundObj;
 
 	#endregion publicParameter
 	
@@ -67,39 +66,52 @@ public class UIManager : MonoBehaviour
 
 	}
 
-	void OnEnable()
-	{
-		//create all the collectible cards at start
-		for(int i = 0; i < GameManager.Instance.allLevelSettings.Length; i++)
-		{
-			Transform newCollectible = Instantiate(collectibleCardBtnPrefab, Vector3.zero, Quaternion.identity) as Transform;
 
-			newCollectible.SetParent(collectibleCardsContainer, false);
-
-			UI_CollectibleBtn collectibleBtn = newCollectible.GetComponent<UI_CollectibleBtn>();
-
-			collectibleBtn.indexID = i;
-			collectibleBtn.UpdateButton();
-
-		}
-	}
 
 	#endregion MonoBehaviour
 
+	
 	// -----------------------------
-	//	button presses
+	//	public api
 	// -----------------------------
-	#region Button Presses
+	#region publicAPI
 	/// <summary>
-	/// Shows the collectibel along with the black background
+	/// Called when the users hit's the home button from the levelSelectPanel
 	/// </summary>
-	public void showCollectible(int levelIndex, Vector3 startPos)
+	public void showMainMenu()
 	{
+		audioSourceSFX.PlayOneShot(clickSFX);
+
+		levelSelectPanelObj.SetActive(false);
+		mainPanelObj.SetActive(true);
+
+	}
+
+	/// <summary>
+	/// Called when the users hit's the play butto from the main menue
+	/// </summary>
+	public void showLevelsMenu()
+	{
+		audioSourceSFX.PlayOneShot(clickSFX);
+		levelSelectPanelObj.SetActive(true);
+		mainPanelObj.SetActive(false);
+
+		//this generates all the level cards
+		createAllLevelCards();
+	}
+
+	/// <summary>
+	/// Called when a collectible button was pressed in the level select menu
+	/// </summary>
+	public void showCollectible(int index, Vector3 startPos)
+	{
+		print("now showing collecitble " + index);
+
 		//show the black background
 		collectibleBackgroundObj.SetActive(true);
 
 		//instantiate the collectible
-		mCurrentCollectible =  Instantiate(GameManager.Instance.getCollectibleObj(), startPos, Quaternion.identity) as GameObject;
+		mCurrentCollectible =  Instantiate(GameManager.Instance.getCollectibleObj(index), startPos, Quaternion.identity) as GameObject;
 
 		TweenHelper.unhideAndScale(mCurrentCollectible, Vector3.zero, Vector3.one, 0.4f, iTween.EaseType.easeOutBack, "none", this.gameObject);
 		TweenHelper.moveWorld(mCurrentCollectible, new Vector3(Camera.main.transform.position.x, 0.0f, Camera.main.transform.position.z + 50.0f), 0.4f, iTween.EaseType.easeOutBack, "none", this.gameObject);
@@ -108,8 +120,12 @@ public class UIManager : MonoBehaviour
 		CollectibleCtrl collectCtrl = mCurrentCollectible.GetComponentInChildren<CollectibleCtrl>(true);
 
 		collectCtrl.gameObject.SetActive(true);
+
 	}
 
+	/// <summary>
+	/// Hides the collectible.
+	/// </summary>
 	public void hideCollectible()
 	{
 		//play the click sound
@@ -125,124 +141,67 @@ public class UIManager : MonoBehaviour
 	}
 
 	/// <summary>
-	/// Called when the play button get's pressed
+	/// Creates all the level cards.
 	/// </summary>
-	public void playButtonPressed()
+	public void createAllLevelCards()
 	{
-		//IF the play button doesn't have a level we show the worldmap
-		if(mLevelToLoad == "")
+		//only create all the level cards if the level select panel is visible
+		if(levelSelectPanelObj.activeInHierarchy == false)
+			return;
+
+		//first we make sure that there are no levelcards any more
+		UI_LevelButton[] allExistingLevelButtons = levelCardContainer.GetComponentsInChildren<UI_LevelButton>(true);
+		foreach(UI_LevelButton lb in allExistingLevelButtons)
 		{
-			print("now playing click sound");
-			audioSourceSFX.PlayOneShot(clickSFX);
-			audioSourceSFX.PlayOneShot(swipeSFX);
-			showWorldMap();
-		} else
-		{
-			audioSourceSFX.PlayOneShot(clickSFX);
-			//else load the level
-			Application.LoadLevel(mLevelToLoad);
+			Destroy(lb.gameObject);
 		}
-	}
-	
-	
-	/// <summary>
-	/// Called when the level button get's pressed
-	/// </summary>
-	public void levelToggleButtonPressed(UI_LevelButton levelBtn)
-	{
-		//play the click button sound
-		audioSourceSFX.PlayOneShot(clickSFX);
 
-		if(levelBtn.toggleBtn.isOn == true)
+		//now create a level button for each level
+		for(int i = 0; i < GameManager.Instance.allLevelSettings.Length; i++)
 		{
-			//only show the button again if it isn't already there
-			if(playButtonTrans.gameObject.activeInHierarchy == false)
-				showPlayButton(true, levelBtn.levelToLoad);
-			
-		} else
-		{
-			hidePlayButton();
-		}
-		
-		
-	}
+			//instantiate the new card
+			GameObject newLevelCard = Instantiate(levelCardPrefab, Vector3.zero, Quaternion.identity) as GameObject;
 
-	#endregion
-	
-	// -----------------------------
-	//	public api
-	// -----------------------------
-	#region publicAPI
-	public void showMainMenu()
-	{
-		audioSourceSFX.PlayOneShot(clickSFX);
-		audioSourceSFX.PlayOneShot(swipeSFX);
-		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[0], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
-	}
+			//parent the new card to the container
+			newLevelCard.transform.SetParent(levelCardContainer.transform);
+			newLevelCard.transform.localScale = Vector3.one;
+			newLevelCard.transform.localPosition = new Vector3(newLevelCard.transform.position.x, newLevelCard.transform.position.y, 0.0f);
 
-	public void showCollectibleMenu()
-	{
-		audioSourceSFX.PlayOneShot(clickSFX);
-		audioSourceSFX.PlayOneShot(swipeSFX);
-		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[1], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
-	}
+			//get the ui_levelButton script from it
+			UI_LevelButton levelCardScript = newLevelCard.GetComponent<UI_LevelButton>();
 
-	/// <summary>
-	/// Shows the world map.
-	/// </summary>
-	public void showWorldMap()
-	{
-		audioSourceSFX.PlayOneShot(clickSFX);
-		audioSourceSFX.PlayOneShot(swipeSFX);
-		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[2], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
-	}
+			//set the settings
+			levelCardScript.levelIndex = i;
 
-	public void showLevelMap()
-	{
-		audioSourceSFX.PlayOneShot(clickSFX);
-		audioSourceSFX.PlayOneShot(swipeSFX);
-		moveMenu(panelMoverTrans.gameObject, new Vector3(panelPositions[3], panelMoverTrans.localPosition.y, panelMoverTrans.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
-	}
+			//set the container size
+			GridLayoutGroup gridLayout 			= levelCardContainer.GetComponent<GridLayoutGroup>();
+			RectTransform	gridLayoutTrans 	= gridLayout.GetComponent<RectTransform>();
+			float 			scrollSize			= (gridLayout.cellSize.x + gridLayout.spacing.x) * GameManager.Instance.allLevelSettings.Length; 
+			gridLayoutTrans.sizeDelta = new Vector2(scrollSize, gridLayoutTrans.sizeDelta.y);
 
-	/// <summary>
-	/// Moves the world map. Called when the side buttons are pressed
-	/// </summary>
-	public void moveWorldMap(int direction)
-	{
-		/*
-		UI_worldMap[] allWorldMaps = worldMapTrans.GetComponentsInChildren<UI_worldMap>();
+			//set the Container postition
+			levelCardContainer.transform.localPosition = new Vector3(scrollSize/2.0f, levelCardContainer.transform.localPosition.y, levelCardContainer.transform.localPosition.z);
 
-		//check if we can move
-		if(direction == 1)
-		{
-			if(mCurrentWorldMapIndex == 0)
-				return;
+
+			//set the locked if locked
+			if(GameManager.Instance.allLevelSettings[i].isLocked)
+			{
+				levelCardScript.setToLocked();
+			} else
+			{
+				//set the playable with collectible visible or not
+				if(GameManager.Instance.allLevelSettings[i].hasCollectibleAchieved)
+				{
+					levelCardScript.setToPlayable(true);
+				} else
+				{
+					levelCardScript.setToPlayable(false);
+				}
+			}
 
 		}
 
-		if(direction == -1)
-		{
-			if(mCurrentWorldMapIndex == allWorldMaps.Length -1)
-				return;
-		}
-
-
-		//get the distance tot he next worldmap
-		float distance = Mathf.Abs(allWorldMaps[mCurrentWorldMapIndex].transform.localPosition.x - allWorldMaps[mCurrentWorldMapIndex + (direction * -1)].transform.localPosition.x);
-
-		//move the worldmap
-		moveMenu(worldMapTrans.gameObject, new Vector3(worldMapTrans.transform.localPosition.x + (distance * direction),
-		                                               worldMapTrans.transform.localPosition.y,
-		                                               worldMapTrans.transform.localPosition.z), 0.5f, iTween.EaseType.easeOutBack, "none", this.gameObject);
-
-		//increase the index
-		mCurrentWorldMapIndex += (direction * -1);
-
-		*/
 	}
-
-
-
 	#endregion
 	
 	
@@ -250,58 +209,11 @@ public class UIManager : MonoBehaviour
 	//	private api
 	// -----------------------------
 	#region privateAPI
-	/// <summary>
-	/// Shows the play button.
-	/// </summary>
-	/// <param name="isAnimated">If set to <c>true</c> is animated.</param>
-	/// <param name="levelName">Level name.</param>
-	void showPlayButton(bool isAnimated, string levelName)
-	{
-		if(isAnimated)
-		{
-			unhideAndScale(playButtonTrans.gameObject, new Vector3(2,2,2), Vector3.one, 0.3f, iTween.EaseType.easeOutBack, "none", this.gameObject);
-		} else
-		{
-			playButtonTrans.gameObject.SetActive(true);
-		}
 
-		//set the level to load
-		mLevelToLoad = levelName;
-	}
-
-	/// <summary>
-	/// Hides the play button.
-	/// </summary>
-	void hidePlayButton()
-	{
-		playButtonTrans.gameObject.SetActive(false);
-		mLevelToLoad = "";
-	}
 	#endregion
 
 
 	#region GENERIC HELPERS
-	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-	//-------------------------------------------------------------------------------------------------
-	//----------------itween helper stuff--------------------------------------------------------------
-	//-------------------------------------------------------------------------------------------------
-	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	
-	public void scaleMenu(GameObject menuToScale, Vector3 scaleAmount, float scaleTime, iTween.EaseType inputEasyType, string onCompleteCall, GameObject objectCaller)
-	{
-		iTween.ScaleTo(menuToScale, iTween.Hash("scale", scaleAmount, "islocal", true, "time", scaleTime, "easeType", inputEasyType, "ignoretimescale", true, "oncomplete",onCompleteCall, "onCompleteTarget", objectCaller));
-	}
-	
-	public void moveMenu(GameObject menuToMove, Vector3 position, float moveTime, iTween.EaseType inputEasyType, string onCompleteCall, GameObject objectCaller)
-	{
-		iTween.MoveTo(menuToMove, iTween.Hash("position", position, "islocal", true, "time", moveTime, "easeType", inputEasyType, "ignoretimescale", true, "oncomplete",onCompleteCall, "onCompleteTarget", objectCaller));
-	}
-	
-	public void unhideAndScale(GameObject inputObj, Vector3 scaleFrom, Vector3 scaleTo, float scaleTime, iTween.EaseType inputEasyType, string onCompleteCall, GameObject objectCaller)
-	{
-		inputObj.SetActive(true);
-		inputObj.transform.localScale = scaleFrom;
-		iTween.ScaleTo(inputObj, iTween.Hash("scale", scaleTo, "islocal", true, "time", scaleTime, "easeType", inputEasyType, "ignoretimescale", true, "oncomplete",onCompleteCall, "onCompleteTarget", objectCaller));
-	}
 	#endregion
 
 }

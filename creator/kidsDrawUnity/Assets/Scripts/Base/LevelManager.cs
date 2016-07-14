@@ -106,11 +106,13 @@ public class LevelManager : MonoBehaviour
 		//show the bg effect
 		bgEffectObj.SetActive(true);
 
+		int currentLevelIndex = GameManager.Instance.currentLevelIndex;
+
 		//unlock the collectible in the gameManager
-		GameManager.Instance.allLevelSettings[GameManager.Instance.currentLevelIndex].unlockLevel();
+		GameManager.Instance.allLevelSettings[currentLevelIndex].unlockLevel();
 
 		//instantiate the collectible and parent it to the collectible container
-		GameObject newCollectible = Instantiate(GameManager.Instance.getCollectibleObj(), collectibleSpawnPosTrans.position, Quaternion.identity) as GameObject;
+		GameObject newCollectible = Instantiate(GameManager.Instance.getCollectibleObj(currentLevelIndex), collectibleSpawnPosTrans.position, Quaternion.identity) as GameObject;
 		newCollectible.transform.SetParent(collectibleContainerObj.transform);
 
 		//scale the collectible

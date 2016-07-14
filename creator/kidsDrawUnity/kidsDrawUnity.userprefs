@@ -1,38 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Props/CrystalCtrl.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
+      <File FileName="Assets/Shaders/unlitAdditive.shader" Line="1" Column="1" />
       <File FileName="Assets/Editor/DrawingLineEditor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base/GameManager.cs" Line="80" Column="60" />
-      <File FileName="Assets/Scripts/UI/UI_CollectibleBtn.cs" Line="50" Column="70" />
-      <File FileName="Assets/Scripts/Props/CrystalCtrl.cs" Line="59" Column="26" />
-      <File FileName="Assets/Scripts/UI/UIManager.cs" Line="105" Column="42" />
+      <File FileName="Assets/Scripts/Base/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/UI_CollectibleBtn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Props/CrystalCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/UIManager.cs" Line="1" Column="1" />
       <File FileName="../../../hazmatHarry/hazmatHarryUnity/Assets/_Scripts/General/GameManager/GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Props/GlowWormBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base/DrawingLine.cs" Line="57" Column="59" />
-      <File FileName="Assets/Scripts/Base/LevelManager.cs" Line="128" Column="108" />
+      <File FileName="Assets/Scripts/Base/DrawingLine.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Base/LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Props/FireflyCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Base/LinePoint.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="kidsDrawUnity" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="Props" expanded="True">
-                  <Node name="CrystalCtrl.cs" selected="True" />
-                </Node>
-                <Node name="UI" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="kidsDrawUnity" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

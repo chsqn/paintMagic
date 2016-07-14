@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainUI/mainUI.unity
   - enabled: 1
-    path: Assets/Scenes/Levels/Flowers/flowers_01.unity
+    path: Assets/Scenes/Levels/level_01.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/level_02.unity
