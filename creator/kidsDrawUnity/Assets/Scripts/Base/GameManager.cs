@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance { get; private set; }	
 
 	public LevelSettings[] 	allLevelSettings;
+	public int				lockedLevelFrom = 12;
 
 	public int				currentLevelIndex;
 	#endregion publicParameter
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
 	{
 		saveData();
 	}
+
 	#endregion MonoBehaviour
 
 		
@@ -75,9 +77,51 @@ public class GameManager : MonoBehaviour
 	// -----------------------------
 
 	#region publicAPI
-	public GameObject getCollectibleObj()
+	/// <summary>
+	/// This will delete all the IN APP PURCHASES. Mainly used for debugging
+	/// </summary>
+	public void deleteIAPs()
 	{
-		return allLevelSettings[currentLevelIndex].collectibleObj;
+		Directory.Delete(Path.Combine (Path.Combine (Application.persistentDataPath, "Unity"), "UnityPurchasing"), true);
+
+		//step through all the levels and set them to locked
+		for(int i = lockedLevelFrom; i < allLevelSettings.Length; i++)
+		{
+			allLevelSettings[i].isLocked = true;
+			allLevelSettings[i].hasCollectibleAchieved = false;
+		}
+
+		//save the data
+		saveData();
+
+		//update the level icons IF the level select panel is visible
+		UIManager.Instance.createAllLevelCards();
+	}
+
+	/// <summary>
+	/// Get's called when all levels are purchased
+	/// </summary>
+	public void unlockAllLevels()
+	{
+		//step through all the levels and set them to unlocked
+		foreach(LevelSettings ls in allLevelSettings)
+		{
+			ls.isLocked = false;
+		}
+
+		//save the data
+		saveData();
+
+		//update the level icons IF the level select panel is visible
+		UIManager.Instance.createAllLevelCards();
+	}
+
+	/// <summary>
+	/// Returns the Collectible GameObject of the given index
+	/// </summary>
+	public GameObject getCollectibleObj(int index)
+	{
+		return allLevelSettings[index].collectibleObj;
 	}
 
 	/// <summary>
@@ -98,7 +142,6 @@ public class GameManager : MonoBehaviour
 		{
 			for(int i = 0; i < allLevelSettings.Length; i++)
 			{
-				print("now saving level " + i);
 				allLevelSettings[i].saveData(i, writer);
 			}
 
@@ -137,7 +180,8 @@ public class GameManager : MonoBehaviour
 public class LevelSettings
 {
 	public GameObject	collectibleObj;   //the object that should be unlocked in the level
-	public bool			isLocked = true;
+	public bool			isLocked 				= true;
+	public bool			hasCollectibleAchieved 	= false;
 	public Sprite		unlockedTexture;
 	public Sprite 		lockedTexture;
 
@@ -147,12 +191,14 @@ public class LevelSettings
 	{
 		// Write our data to the file.
 		writer.Write(isLocked, "isLocked_" + index.ToString());
+		writer.Write(hasCollectibleAchieved, "hasCollectibleAchieved_" + index.ToString());
 	}
 
 	public void loadData(int index, ES2Reader reader)
 	{
 		// Read data from the file.
-		isLocked			= reader.Read<bool>("isLocked_" + index.ToString());
+		isLocked				= reader.Read<bool>("isLocked_" + index.ToString());
+		hasCollectibleAchieved	= reader.Read<bool>("hasCollectibleAchieved_" + index.ToString());
 	}
 
 	/// <summary>
@@ -161,5 +207,13 @@ public class LevelSettings
 	public void unlockLevel()
 	{
 		isLocked = false;
+	}
+
+	/// <summary>
+	/// Unlocks the collectible.
+	/// </summary>
+	public void unlockCollectible()
+	{
+		hasCollectibleAchieved = true;
 	}
 }

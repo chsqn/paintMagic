@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d23b5997c625343d697f44c5a12c481a
-timeCreated: 1468355790
+timeCreated: 1468424006
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -392,41 +392,24 @@ TextureImporter:
     - name: UI_LevelBtn_Border
       rect:
         serializedVersion: 2
-        x: 1347
-        y: 1673
-        width: 248
-        height: 344
+        x: 1337
+        y: 1662
+        width: 270
+        height: 365
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 50, y: 50, z: 50, w: 50}
       outline:
-      - - {x: -116, y: -172}
-        - {x: -116, y: -170}
-        - {x: -119, y: -169}
-        - {x: -121, y: -172}
-      - - {x: 119, y: -170}
-        - {x: 119, y: -171}
-        - {x: 120, y: -172}
-        - {x: 123, y: -172}
-        - {x: 124, y: -171}
-        - {x: 124, y: -166}
-        - {x: 123, y: -166}
-      - - {x: -103, y: 172}
-        - {x: -124, y: 160}
-        - {x: -124, y: -159}
-        - {x: -117, y: -171}
-        - {x: 109, y: -171}
-        - {x: 124, y: -170}
-        - {x: 124, y: 161}
-        - {x: 108, y: 172}
-      - - {x: -99, y: -122}
-        - {x: -98, y: 123}
-        - {x: -78, y: 144}
-        - {x: 79, y: 144}
-        - {x: 98, y: 127}
-        - {x: 100, y: 118}
-        - {x: 99, y: -124}
-        - {x: 80, y: -143}
+      - - {x: -127, y: 182.5}
+        - {x: -135, y: 155.5}
+        - {x: -135, y: -182.5}
+        - {x: 135, y: -182.5}
+        - {x: 135, y: 166.5}
+        - {x: 122, y: 182.5}
+      - - {x: -120, y: 146.5}
+        - {x: 122, y: 151.5}
+        - {x: 122, y: -151.5}
+        - {x: -102, y: -165.5}
     - name: UI_LevelBtn_BG
       rect:
         serializedVersion: 2
