@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 5a9b47361a06c4affb5e6c10579c0588
+timeCreated: 1468873471
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: monsterEyesMouths_0
+    21300002: monsterEyesMouths_1
+    21300004: monsterEyesMouths_2
+    21300006: monsterEyesMouths_3
+    21300008: monsterEyesMouths_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: monsterEyesMouths_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 848
+        width: 154
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 78}
+        - {x: -59, y: 73}
+        - {x: -77, y: 35}
+        - {x: -77, y: -45}
+        - {x: -46, y: -78}
+        - {x: 62, y: -78}
+        - {x: 77, y: -42}
+        - {x: 77, y: 58}
+        - {x: 56, y: 78}
+    - name: monsterEyesMouths_1
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 868
+        width: 110
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 56}
+        - {x: -55, y: 37}
+        - {x: -55, y: -34}
+        - {x: -53, y: -40}
+        - {x: -30, y: -56}
+        - {x: 21, y: -56}
+        - {x: 41, y: -52}
+        - {x: 55, y: -27}
+        - {x: 55, y: 50}
+        - {x: 36, y: 56}
+    - name: monsterEyesMouths_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 677
+        width: 299
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 149.5, y: 63.5}
+        - {x: 45.5, y: 62.5}
+        - {x: -107.5, y: 69.5}
+        - {x: -149.5, y: 69.5}
+        - {x: -149.5, y: 9.5}
+        - {x: -130.5, y: -41.5}
+        - {x: -106.5, y: -60.5}
+        - {x: -69.5, y: -69.5}
+        - {x: 77.5, y: -69.5}
+        - {x: 94.5, y: -66.5}
+        - {x: 116.5, y: -61.5}
+        - {x: 149.5, y: -6.5}
+    - name: monsterEyesMouths_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 560
+        width: 247
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -123.5, y: 33.5}
+        - {x: -123.5, y: -30.5}
+        - {x: -110.5, y: -33.5}
+        - {x: 122.5, y: -33.5}
+        - {x: 123.5, y: -30.5}
+        - {x: 123.5, y: 33.5}
+    - name: monsterEyesMouths_4
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 931
+        width: 158
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 35}
+        - {x: -55, y: 25}
+        - {x: -78, y: -16}
+        - {x: -78, y: -33}
+        - {x: 78, y: -33}
+        - {x: 78, y: 4}
+        - {x: 45, y: 35}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

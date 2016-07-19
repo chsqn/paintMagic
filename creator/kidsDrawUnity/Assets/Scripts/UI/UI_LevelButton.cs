@@ -60,6 +60,7 @@ public class UI_LevelButton : MonoBehaviour
 	#region publicAPI
 	public void playButtonPressed()
 	{
+		GameManager.Instance.currentLevelIndex = levelIndex;
 		Application.LoadLevel("level_" + (levelIndex+1).ToString("00"));	
 	}
 

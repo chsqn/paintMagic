@@ -79,6 +79,7 @@
      <None Include="Assets\Shaders\blendVertexColorWhite.shader" />
      <None Include="Assets\Line Renderer Pro\Shaders\Standard\LineStandardInput.cginc" />
      <None Include="Assets\Shaders\Subtract TexVc.shader" />
+     <None Include="Assets\SpriteDeformerTool\code\AlphaTestWithColor.shader" />
      <None Include="Assets\Easy Save 2\readme.txt" />
      <None Include="Assets\Shaders\Exclusion TexVc.shader" />
      <None Include="Assets\Shaders\hsvShader_02.shader" />
