@@ -22,7 +22,7 @@ public class GenericEyeController : MonoBehaviour
 	public float eyeRadius = 10.0f;
 	public float pupilStartMoveTimeMin = 2.0f;
 	public float pupilStartMovetimeMax = 4.0f;
-
+	public float reCenterPupilAfter		= 1.0f;
 	#endregion publicParameter
 
 		
@@ -35,6 +35,7 @@ public class GenericEyeController : MonoBehaviour
 	private float mCurrentPupilStartMoveTime;
 	private Vector3 mPupilLeftCenterPos;
 	private Vector3 mPupilRightCenterPos;
+	private RaycastHit hit;
 
 	#endregion privateMember
 
@@ -60,11 +61,13 @@ public class GenericEyeController : MonoBehaviour
 			mCurrentBlinkStartTime = Time.time + Random.Range(blinkStartTimeMin, blinkStartTimeMax);
 		}
 
+		/*
 		if(Time.time > mCurrentPupilStartMoveTime)
 		{
 			movePupil();
 			mCurrentPupilStartMoveTime = Time.time + Random.Range(pupilStartMoveTimeMin, pupilStartMovetimeMax);
 		}
+		*/
 	}
 
 	#endregion MonoBehaviour
@@ -75,7 +78,21 @@ public class GenericEyeController : MonoBehaviour
 	// -----------------------------
 
 	#region publicAPI
+	public void setEyeToTouchDirection(Collider coll)
+	{
+		//get the touched point
+		if(coll.Raycast(Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 3.0f)), out hit, 99999.9f))
+		{
+			Vector3 leftEyeLookDir = (openEyeLeft.transform.position - hit.point).normalized * eyeRadius * -1.0f;
+			Vector3 rightEyeLookDir = (openEyeRight.transform.position - hit.point).normalized * eyeRadius * -1.0f;
 
+			pupilLeft.transform.position 	= new Vector3(mPupilLeftCenterPos.x + leftEyeLookDir.x, mPupilLeftCenterPos.y + leftEyeLookDir.y, pupilLeft.transform.position.z);
+			pupilRight.transform.position	= new Vector3(mPupilRightCenterPos.x + rightEyeLookDir.x, mPupilRightCenterPos.y + rightEyeLookDir.y, pupilRight.transform.position.z);
+
+			StopAllCoroutines();
+			StartCoroutine(resetPupilPosAfter());
+		}
+	}
 	#endregion
 
 		
@@ -93,6 +110,13 @@ public class GenericEyeController : MonoBehaviour
 		pupilRight.transform.position	= new Vector3(mPupilRightCenterPos.x + randDir.x, mPupilRightCenterPos.y + randDir.y, pupilRight.transform.position.z);
 
 
+	}
+
+	IEnumerator resetPupilPosAfter()
+	{
+		yield return new WaitForSeconds(reCenterPupilAfter);
+		pupilLeft.transform.position 	= new Vector3(openEyeLeft.transform.position.x, openEyeLeft.transform.position.y, openEyeLeft.transform.position.z - 2.0f);
+		pupilRight.transform.position 	= new Vector3(openEyeRight.transform.position.x, openEyeRight.transform.position.y, openEyeRight.transform.position.z - 2.0f);
 	}
 
 	IEnumerator closeEyesFor()

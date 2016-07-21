@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: a391ab82abaac43df8f1a797e8ba88b1, type: 3}
+          m_Texture: {fileID: 2800000, guid: ecf97e50f9f49415ca398c2273cfa5d4, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -129,6 +129,10 @@ Material:
         second: 0
       data:
         first:
+          name: _InvFade
+        second: 1
+      data:
+        first:
           name: _GlossMapScale
         second: 1
       data:
@@ -142,10 +146,6 @@ Material:
       data:
         first:
           name: _SpecularHighlights
-        second: 1
-      data:
-        first:
-          name: _InvFade
         second: 1
     m_Colors:
       data:

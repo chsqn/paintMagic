@@ -48,6 +48,7 @@
      <Compile Include="Assets\Camera Fit\Editor\CameraFitEditor.cs" />
      <Compile Include="Assets\Editor\DrawingLineEditor.cs" />
      <Compile Include="Assets\Editor\MeshRendererSortingLayersEditor.cs" />
+     <Compile Include="Assets\Editor\ToolsEditor.cs" />
      <Compile Include="Assets\JellySprites\Editor\JellySpriteEditor.cs" />
      <Compile Include="Assets\JellySprites\Editor\UnityJellySpriteEditor.cs" />
      <Compile Include="Assets\Line Renderer Pro\Editor\LineRendererProEditor.cs" />

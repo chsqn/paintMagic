@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\Base\TweenHelper.cs" />
      <Compile Include="Assets\Scripts\DEBUG\DEBUG_JellySprite.cs" />
      <Compile Include="Assets\Scripts\DEBUG\DEBUG_drawCube.cs" />
+     <Compile Include="Assets\Scripts\Others\AttachToPoints.cs" />
      <Compile Include="Assets\Scripts\Others\CollectibleSpawningBehaviour.cs" />
      <Compile Include="Assets\Scripts\Others\DestroyParticlesAfterDuration.cs" />
      <Compile Include="Assets\Scripts\Others\RandomizePitch.cs" />
@@ -88,6 +89,7 @@
      <Compile Include="Assets\Scripts\Others\RotateAround.cs" />
      <Compile Include="Assets\Scripts\Others\ScaleEffectAnimator.cs" />
      <Compile Include="Assets\Scripts\Others\TouchAnimator.cs" />
+     <Compile Include="Assets\Scripts\Others\TriggerTouchedOnAllAnimations.cs" />
      <Compile Include="Assets\Scripts\Props\ButterflyCtrl.cs" />
      <Compile Include="Assets\Scripts\Props\CollectibleCtrl.cs" />
      <Compile Include="Assets\Scripts\Props\CrystalCtrl.cs" />
