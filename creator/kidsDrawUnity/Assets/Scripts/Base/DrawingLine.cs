@@ -17,7 +17,8 @@ public class DrawingLine : MonoBehaviour
 	public float				addPitch = 0.2f;
 
 	[Header("-----SETTINGS-------")]
-	public float				maxDistanceToSpline = 20.0f;
+	public bool					isClosed = false;
+
 	[Range(0.5f, 10.0f)]
 	public float				lineWidth = 4.0f;
 	//public List<GameObject>		objectsToShow;
@@ -128,6 +129,15 @@ public class DrawingLine : MonoBehaviour
 			allPoints[i].idText.text 	= (i + 1).ToString();
 			allPoints[i].ID				= i+1;
 			allPoints[i].mDrawingLine 	= this;
+		}
+
+		//if it is a closed line we add the last point to it
+		if(isClosed)
+		{
+			mLineRenderer.SetVertexCount(allPoints.Count + 1);
+			mLineRenderer.SetPosition(allPoints.Count, new Vector3(allPoints[0].transform.position.x,
+				allPoints[0].transform.position.y,
+				allPoints[0].transform.position.z + 0.2f));
 		}
 
 		//set the line width

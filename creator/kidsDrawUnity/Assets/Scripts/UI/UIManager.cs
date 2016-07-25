@@ -24,6 +24,9 @@ public class UIManager : MonoBehaviour
 	public GameObject	levelCardPrefab;
 	public GameObject	levelCardContainer;
 
+	[Header("===---ALL WORLD PANEL ----")]
+	public GameObject[] allWorldPanels;
+
 	[Header("-------COLLECTIBLES -------")]
 	public GameObject 	collectibleBackgroundObj;
 
@@ -75,6 +78,27 @@ public class UIManager : MonoBehaviour
 	//	public api
 	// -----------------------------
 	#region publicAPI
+	public void moveWorldPanels(int moveValue)
+	{
+		//hide the curent world index panel
+		allWorldPanels[mCurrentWorldMapIndex].SetActive(false);
+
+		//add to the worldIndex
+		mCurrentWorldMapIndex += moveValue;
+
+		//wrap the index around
+		if(mCurrentWorldMapIndex < 0)
+			mCurrentWorldMapIndex = allWorldPanels.Length -1;
+
+		if(mCurrentWorldMapIndex > allWorldPanels.Length-1)
+			mCurrentWorldMapIndex = 0;
+
+		//show the next worldmap
+		allWorldPanels[mCurrentWorldMapIndex].SetActive(true);
+
+
+	}
+
 	/// <summary>
 	/// Called when the users hit's the home button from the levelSelectPanel
 	/// </summary>
