@@ -1,26 +1,40 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Base/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/UIManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/UIManager.cs" Line="4" Column="1" />
-      <File FileName="Assets/Scripts/UI/UI_LevelButton.cs" Line="63" Column="50" />
+      <File FileName="Assets/JellySprites/Scripts/UnityJellySprite.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/UIManager.cs" Line="93" Column="53" />
+      <File FileName="Assets/Scripts/UI/UI_LevelButton.cs" Line="63" Column="55" />
       <File FileName="Assets/Shaders/unlitAdditive.shader" Line="1" Column="1" />
       <File FileName="Assets/Editor/DrawingLineEditor.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Base/GameManager.cs" Line="210" Column="1" />
       <File FileName="Assets/Scripts/Props/CrystalCtrl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Props/GlowWormBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base/DrawingLine.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base/LevelManager.cs" Line="112" Column="77" />
+      <File FileName="Assets/Scripts/Base/DrawingLine.cs" Line="138" Column="45" />
+      <File FileName="Assets/Scripts/Base/LevelManager.cs" Line="153" Column="29" />
       <File FileName="Assets/Scripts/Props/FireflyCtrl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base/LinePoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Base/LinePoint.cs" Line="106" Column="15" />
       <File FileName="Assets/Plugins/UnityPurchasing/script/IAPDemo.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base/Purchaser.cs" Line="31" Column="27" />
-      <File FileName="Assets/Scripts/Base/IAP_Manager.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/Base/Purchaser.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Base/IAP_Manager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Others/ScaleEffectAnimator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Others/RotAnimator.cs" Line="34" Column="5" />
+      <File FileName="Assets/Scripts/Others/RotAnimator.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Others/TouchAnimator.cs" Line="53" Column="3" />
-      <File FileName="Assets/Scripts/Base/TweenHelper.cs" Line="40" Column="78" />
-      <File FileName="Assets/Scripts/Others/DestroyParticlesAfterDuration.cs" Line="57" Column="53" />
+      <File FileName="Assets/Scripts/Base/TweenHelper.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Others/DestroyParticlesAfterDuration.cs" Line="1" Column="1" />
+      <File FileName="Assets/JellySprites/Scripts/JellySprite.cs" Line="1728" Column="1" />
+      <File FileName="Assets/JellySprites/Demo/Scripts/BlobBehaviour.cs" Line="28" Column="16" />
+      <File FileName="Assets/Scripts/DEBUG/DEBUG_JellySprite.cs" Line="34" Column="49" />
+      <File FileName="Assets/Scripts/Props/JellyTouch.cs" Line="46" Column="1" />
+      <File FileName="Assets/Scripts/Props/GenericEyeController.cs" Line="92" Column="24" />
+      <File FileName="Assets/JellySprites/Demo/Scripts/BlobEyes.cs" Line="8" Column="28" />
+      <File FileName="Assets/SpriteDeformerTool/Examples/EXAMPLE_monster.cs" Line="32" Column="56" />
+      <File FileName="Assets/Scripts/Others/AttachToPoints.cs" Line="62" Column="1" />
+      <File FileName="Assets/Scripts/Others/TriggerTouchedOnAllAnimations.cs" Line="44" Column="37" />
+      <File FileName="../../../hazmatHarry/hazmatHarryUnity/Assets/Editor/ANSTools.cs" Line="1" Column="1" />
+      <File FileName="Assets/Editor/ToolsEditor.cs" Line="42" Column="29" />
+      <File FileName="Assets/Scripts/Others/ObjectSpawner.cs" Line="80" Column="70" />
+      <File FileName="Assets/Scripts/Levels/Water/BubbleMoveCtrl.cs" Line="67" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,11 +42,11 @@
           <Node name="kidsDrawUnity" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Base" expanded="True">
-                  <Node name="GameManager.cs" selected="True" />
-                </Node>
+                <Node name="Base" expanded="True" />
                 <Node name="Others" expanded="True" />
-                <Node name="UI" expanded="True" />
+                <Node name="UI" expanded="True">
+                  <Node name="UIManager.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
             <Node name="Assembly-CSharp-Editor" expanded="True" />

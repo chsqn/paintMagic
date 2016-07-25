@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using TheKnightsOfUnity.LineRendererPro;
 
 public class DrawingLine : MonoBehaviour 
 {

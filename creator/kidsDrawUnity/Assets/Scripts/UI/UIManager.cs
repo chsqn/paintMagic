@@ -121,7 +121,7 @@ public class UIManager : MonoBehaviour
 		mainPanelObj.SetActive(false);
 
 		//this generates all the level cards
-		createAllLevelCards();
+		//createAllLevelCards();
 	}
 
 	/// <summary>
